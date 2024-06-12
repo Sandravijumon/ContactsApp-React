@@ -7,6 +7,9 @@ const Search = () => {
            "firstName":""
         }
     )
+    const [result,setResult]=useState(
+        []
+    )
     const inputHandler=(event)=>{
         changeData({...data,[event.target.name]:event.target.value})
     }
@@ -26,8 +29,32 @@ const Search = () => {
                     <button className="btn btn-primary" onClick={readValue}>Search</button>
                 </div>
             </div>
+            
+            <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    {result.map((value,index)=>{
+        return <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+    })}
+    
+  </tbody>
+</table>
+
+            </div>
         </div>
-    </div>
+    
   )
 }
 
