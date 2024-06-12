@@ -10,8 +10,8 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<AddContacts/>}/>
-      <Route path='/' element={<Search/>}/>
-      <Route path='/' element={<ViewAll/>}/>
+      <Route path='/s' element={<Search/>}/>
+      <Route path='/v' element={<ViewAll/>}/>
     </Routes>
     </BrowserRouter>
   );
